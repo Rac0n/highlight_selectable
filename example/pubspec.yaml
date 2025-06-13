@@ -1,0 +1,20 @@
+name: highlight_selectable_example
+description: Example for highlight_selectable
+publish_to: 'none'
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  highlight_selectable:
+    path: ../
+  flutter_lints: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true

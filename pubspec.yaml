@@ -1,0 +1,37 @@
+name: highlight_selectable
+description: >
+  A Flutter widget that displays syntax-highlighted code blocks, with support for selection,
+  copy button, and inline editing. Based on flutter_highlight and highlight.
+
+version: 0.1.0
+
+homepage: https://github.com/Rac0n/highlight_selectable
+repository: https://github.com/Rac0n/highlight_selectable
+issue_tracker: https://github.com/Rac0n/highlight_selectable/issues
+documentation: https://github.com/Rac0n/highlight_selectable#readme
+license: MIT
+
+topics:
+  - flutter
+  - highlight
+  - code
+  - editor
+  - syntax
+
+environment:
+  sdk: ^3.8.0
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  highlight: ^0.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  
+
+flutter:
+  uses-material-design: true

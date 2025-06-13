@@ -32,7 +32,7 @@ dependencies:
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:highlight/themes/gruvbox-dark.dart';
+import 'package:highlight_selectable/theme_map.dart';
 import 'package:highlight_selectable/highlight_selectable.dart';
 
 class Example extends StatelessWidget {
@@ -43,7 +43,7 @@ class Example extends StatelessWidget {
     return HighlightSelectable(
       code,
       language: 'dart',
-      theme: gruvboxDarkTheme,
+      theme: themeMap['a11y-dark']!,
       selectable: true,
       showCopyButton: true,
       showEditButton: true,

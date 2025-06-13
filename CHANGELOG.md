@@ -1,3 +1,7 @@
+## 0.1.2
+
+- Minor bug with the editing functions
+
 ## 0.1.1
 
 - Minor documentation update in README.md

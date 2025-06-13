@@ -46,6 +46,7 @@ class HighlightSelectableState extends State<HighlightSelectable>{
   static const _defaultBackgroundColor = Color(0xffffffff);
   late TextEditingController _controller;
   bool _isEditing = false;
+  final FocusNode _focusNode = FocusNode();
 
   @override
   void initState() {
@@ -108,6 +109,9 @@ class HighlightSelectableState extends State<HighlightSelectable>{
               child: TextField(
                 controller: _controller,
                 maxLines: null,
+                keyboardType: TextInputType.multiline,
+                textInputAction: TextInputAction.newline,
+                focusNode: _focusNode,
                 expands: true,
                 textAlignVertical: TextAlignVertical.top,
                 style: TextStyle(
@@ -182,7 +186,11 @@ class HighlightSelectableState extends State<HighlightSelectable>{
         IconButton(
           icon: Icon(Icons.edit, size: 16, color: widget.theme[_rootKey]?.color ?? _defaultFontColor),
           tooltip: 'Edit',
-          onPressed: () => setState(() => _isEditing = true),
+          onPressed: () {
+            FocusScope.of(context).requestFocus(_focusNode);
+            widget.onEdit?.call();
+            setState(() => _isEditing = true);
+          },
         ),
       ...?widget.overlayButtons,
     ];

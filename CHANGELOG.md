@@ -1,3 +1,7 @@
+## 0.1.1
+
+- Minor documentation update in README.md
+
 ## 0.1.0
 
 - Initial release of `highlight_selectable`

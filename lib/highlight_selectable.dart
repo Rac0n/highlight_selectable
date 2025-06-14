@@ -105,14 +105,13 @@ class HighlightSelectableState extends State<HighlightSelectable>{
         child: Stack(
           children: [
             ConstrainedBox(
-              constraints: const BoxConstraints(minHeight: 120), // adjust to your desired min height
+              constraints: const BoxConstraints(minHeight: 64), // adjust to your desired min height
               child: TextField(
                 controller: _controller,
                 maxLines: null,
                 keyboardType: TextInputType.multiline,
                 textInputAction: TextInputAction.newline,
                 focusNode: _focusNode,
-                expands: true,
                 textAlignVertical: TextAlignVertical.top,
                 style: TextStyle(
                   fontFamily: 'monospace',
@@ -200,7 +199,8 @@ class HighlightSelectableState extends State<HighlightSelectable>{
       padding: widget.padding,
       child: Stack(
         children: [
-          Positioned.fill(
+            ConstrainedBox(
+            constraints: const BoxConstraints(minHeight: 64, minWidth: double.infinity), // adjust to your desired min height
             child: widget.selectable
                 ? SelectableText.rich(content)
                 : RichText(text: content),

@@ -30,9 +30,7 @@ class _HighlightHomePageState extends State<HighlightHomePage> {
   bool _isSelectable = false;
 
   final String _code = '''
-void main() {
-  print('Hello, Flutter!');
-}
+void main();
 ''';
 
   @override
@@ -59,6 +57,7 @@ void main() {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: HighlightSelectable(
+          padding: const EdgeInsets.all(16.0),
         _code,
         language: 'dart',
         theme: themeMap['a11y-dark']!,

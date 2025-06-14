@@ -1,3 +1,7 @@
+## 0.1.3
+
+- Minor widget expansion fix
+
 ## 0.1.2
 
 - Minor bug with the editing functions

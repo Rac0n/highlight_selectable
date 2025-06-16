@@ -1,3 +1,7 @@
+## 0.1.4
+
+- Polished look and horizontal scrolling
+
 ## 0.1.3
 
 - Minor widget expansion fix

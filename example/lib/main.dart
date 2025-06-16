@@ -57,13 +57,14 @@ void main();
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: HighlightSelectable(
-          padding: const EdgeInsets.all(16.0),
         _code,
         language: 'dart',
+          padding: const EdgeInsets.all(16.0),
         theme: themeMap['a11y-dark']!,
         selectable: _isSelectable,
-        showCopyButton: true,
+        showCopyButton: false,
         showEditButton: true,
+        showLanguage: true,
         onChanged: (updatedCode) {
           print("Edited code: $updatedCode");
         },
